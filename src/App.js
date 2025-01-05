@@ -109,7 +109,7 @@ const Hero = () => {
           <br />
           <span className="text-blue-500">Business Intelligence Analyst</span>
         </h1>
-        <p className="mb-8 leading-relaxed text-base sm:text-lg md:text-xl">
+        <p className="mb-8 leading-relaxed text-sm sm:text-base md:text-lg">
           Tijani Olusola is a Chemical Engineering Graduate, Data & Business
           Intelligence Analyst and Researcher. I thrive at the intersection of
           numbers and narratives. With a keen eye for insight, I uncover hidden
