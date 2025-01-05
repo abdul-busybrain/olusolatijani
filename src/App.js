@@ -1,11 +1,20 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, ExternalLink, Code, Layers, Server } from "lucide-react";
+import {
+  ArrowRight,
+  ExternalLink,
+  Database,
+  BarChart,
+  PieChart,
+  ClipboardList,
+  Tag,
+} from "lucide-react";
 
 // Images
 import hero from "./img/hero.jpg";
-import kwadagoHero from "./img/kwadago.png";
-import gajamiaHero from "./img/gajamia.png";
-import foodiHero from "./img/FOODI.png";
+import callCenterDashBoard from "./img/call-center-dashboard.jpg";
+import insurancePolicy from "./img/insurance-policy.jpg";
+import healthTracker from "./img/health-tracker.jpg";
+import serviceDesk from "./img/service-desk.jpg";
 
 const softBeige = "#f9efe7";
 const brightYellow = "#ffe872";
@@ -62,9 +71,9 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <a href="/">
             <div className="text-xs sm:text-sm font-bold uppercase">
-              <div className="px-1">Abdullahi</div>
-              <div className="px-1">Auwal</div>
-              <div className="px-1">Haruna</div>
+              <div className="px-1">Olusola</div>
+              <div className="px-1">Ibrahim</div>
+              <div className="px-1">Tijani</div>
             </div>
           </a>
         </div>
@@ -95,16 +104,20 @@ const Hero = () => {
       className="pt-28 pb-16 max-w-6xl mx-auto px-4 min-h-screen flex flex-col md:flex-row items-center"
     >
       <div className="w-full md:w-1/2 pr-0 md:pr-12 text-center md:text-left">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6">
-          <span className={`bg-[${brightYellow}]`}>Frontend Developer</span> /{" "}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
+          <span className="text-blue-500">Data &</span>
           <br />
-          <span className={`bg-[${brightYellow}] px-2`}>Web Designer</span>
+          <span className="text-blue-500">Business Intelligence Analyst</span>
         </h1>
-        <p className="mb-8 leading-relaxed text-base sm:text-lg">
-          Results-driven Frontend Web Developer with expertise in building
-          responsive, user-centric web applications. Skilled in modern
-          JavaScript frameworks and UI/UX best practices, with a strong focus on
-          performance optimization, accessibility, and SEO.
+        <p className="mb-8 leading-relaxed text-base sm:text-lg md:text-xl">
+          Tijani Olusola is a Chemical Engineering Graduate, Data & Business
+          Intelligence Analyst and Researcher. I thrive at the intersection of
+          numbers and narratives. With a keen eye for insight, I uncover hidden
+          patterns and trends that drive informed decision-making. My technical
+          skills include knowledge of data analysis tools like Microsoft Excel
+          and Business Intelligence tool like Tableau. I also love working with
+          SQL Server query language and Python Programming language. Reach out
+          to me and let's explore how data can drive your story forward!
         </p>
         <a
           href="#work"
@@ -119,9 +132,9 @@ const Hero = () => {
           alt="Hero Visual"
           className="rounded-lg shadow-xl border-4 border-black"
         />
-        <p className={`mt-4 text-sm text-center bg-[${brightYellow}] px-2`}>
-          @ DevFest Ilorin Kwara State 2024
-        </p>
+        {/* <p className={`mt-4 text-sm text-center bg-[${brightYellow}] px-2`}>
+      @ DevFest Ilorin Kwara State 2024
+    </p> */}
       </div>
     </section>
   );
@@ -130,30 +143,39 @@ const Hero = () => {
 const WorkSection = () => {
   const projects = [
     {
-      title: "KWADAGO (Job Application Platform)",
-      technologies: ["HTML", "CSS", "JavaScript", "Responsive Web Design"],
+      title: "Call Center Dashboard Analysis",
+      technologies: ["Microsoft Excel", "Tableau"],
       description:
-        "A streamlined digital platform connecting job seekers with employers, enabling easy application submissions while providing powerful tools for resume management, job tracking, and professional networking in one cohesive ecosystem.",
-      image: kwadagoHero,
-      link: "https://kwadago.vercel.app/",
+        "This project showcases an interactive dashboard designed to monitor and analyze call center performance metrics. It provides insights into key performance indicators such as incoming call volume, customer satisfaction (CSAT) scores, first call resolution (FCR) rates, and average talk time. The dashboard also highlights call trends by issue type, top-performing agents, and activity heatmaps for a better understanding of call patterns across different days and times. This visual tool is optimized for real-time performance tracking and decision-making, ensuring efficient call center operations.",
+      image: callCenterDashBoard,
+      link: "https://public.tableau.com/app/profile/olusola.tijani/viz/CallCentreDashboard_17310063414030/Dashboard ",
       ongoing: false,
     },
     {
-      title: "GA JAMI'A (Education Commerce)",
-      technologies: ["React", "Firebase", "Tailwind"],
+      title: "Insurance Policy Dashboard",
+      technologies: ["SQL", "Tableau"],
       description:
-        "An education-commerce platform with secure user login and logout functionality. It offers a seamless experience for purchasing educational materials, accessing courses, and managing user accounts. Features include responsive design, secure payment integration, and personalized user dashboards.",
-      image: gajamiaHero,
-      link: "https://gajamia.vercel.app/",
-      ongoing: true,
+        "This project demonstrates a comprehensive dashboard built to analyze key metrics in the insurance industry. The dashboard provides insights into vehicle insurance distribution by type (commercial and private), claim amounts across coverage zones (urban, rural, suburban), and demographic data such as marital status and education level. This visual analysis tool is designed to help stakeholders better understand customer trends and optimize policy offerings.",
+      image: insurancePolicy,
+      link: "https://public.tableau.com/app/profile/olusola.tijani/viz/Ongoingproject_17250412582900/Dashboard",
+      ongoing: false,
     },
     {
-      title: "FOODI (Restaurant Website)",
-      technologies: ["HTML", "CSS", "JavaScript", "Responsive Web Design"],
+      title: "Health Tracker Dashboard",
+      technologies: ["Microsoft Excel", "Tableau"],
       description:
-        "A beautifully designed landing page showcasing the restaurant's ambiance, menu, and special offers. Features include high-quality images, customer reviews, online reservations, and contact information to attract and engage potential diners.",
-      image: foodiHero,
-      link: "https://abdul-busybrain.github.io/foodi/",
+        "This project highlights a dynamic dashboard designed for personal health tracking. It features key metrics such as blood pressure, heart rate, BMI, daily calorie intake, calories burned, sleep duration, water intake, mood score, and step count. Each metric is visually represented with current values, historical comparisons, and trends. The dashboard provides a comprehensive view of individual health insights, enabling users to monitor their wellness and make informed decisions about their lifestyle.",
+      image: healthTracker,
+      link: " https://public.tableau.com/app/profile/olusola.tijani/viz/HealthTracker_17316848682280/HealthTracker",
+      ongoing: false,
+    },
+    {
+      title: "Service Desk Dashboard",
+      technologies: ["Microsoft Excel", "Tableau"],
+      description:
+        "This project showcases a detailed dashboard designed to monitor and analyze service desk operations. Key metrics include the total number of cases categorized by priority (low, medium, high), case distribution by type (IT support, hardware requests, new access requests, software requests), and case allocation among agents. The dashboard also highlights agent performance, detailing the number of cases handled, priority levels, and closure rates. Additionally, it tracks user-reported cases, providing a clear overview of service desk efficiency and workload distribution.",
+      image: serviceDesk,
+      link: "https://public.tableau.com/app/profile/olusola.tijani/viz/ServiceDeskBookshop/ServiceDeskDashboard",
       ongoing: false,
     },
   ];
@@ -185,7 +207,9 @@ const WorkSection = () => {
           </div>
           <div className="w-full md:w-1/2 p-8">
             <h3 className="text-2xl font-semibold mb-4">
-              <span className={`bg-[${brightYellow}] `}>{project.title}</span>
+              <span className="text-blue-500  py-1 rounded">
+                {project.title}
+              </span>
             </h3>
             <div className="flex flex-wrap space-x-2 mb-4">
               {project.technologies.map((tech, idx) => (
@@ -218,35 +242,34 @@ const WorkSection = () => {
 const ServicesSection = () => {
   const services = [
     {
-      icon: <Code className="text-black" size={36} />,
-      title: "Web Design & Development",
+      icon: <Database className="text-black" size={36} />,
+      title: "Data Cleaning, Formatting & Preparation",
       description:
-        "Designing user interfaces and experiences using tools like Figma to create wireframes, prototypes, and high-fidelity designs.",
+        "Transforming raw data into organized, accurate, and analysis-ready formats by removing errors, standardizing structures, and ensuring consistency.",
     },
     {
-      icon: <Server className="text-black" size={36} />,
-      title: "E-commerce Development",
+      icon: <BarChart className="text-black" size={36} />,
+      title: "Data & Business Intelligence Analysis",
       description:
-        "Developing e-commerce websites with features like product listings, shopping carts, and payment gateways.",
+        "Providing actionable insights through data analysis and visualization to support informed decision-making and drive business growth.",
     },
     {
-      icon: <Layers className="text-black" size={36} />,
-      title: "Content Management Systems (CMS)",
+      icon: <PieChart className="text-black" size={36} />,
+      title: "Tableau Dashboards & Data Analysis Reports",
       description:
-        "Customizing and developing websites using WordPress, including theme development and plugin integration.",
+        "Designing interactive Tableau dashboards and creating detailed data analysis reports to present insights clearly and effectively.",
     },
     {
-      icon: <Server className="text-black" size={36} />,
-      title: "SEO Optimization",
+      icon: <ClipboardList className="text-black" size={36} />,
+      title: "Data Analysis Consultancy",
       description:
-        "Implementing best practices for search engine optimization to improve website visibility and ranking on search engines.",
+        "Offering expert guidance to help businesses interpret data, identify trends, and make data-driven decisions for improved outcomes.",
     },
-
     {
-      icon: <Code className="text-black" size={36} />,
-      title: "Custom Web Applications",
+      icon: <Tag className="text-black" size={36} />,
+      title: "Data Annotation",
       description:
-        "Developing custom web applications tailored to specific business needs using modern web technologies.",
+        "Accurately labeling and categorizing data, including text, images, and videos, to train and improve machine learning models for various applications such as AI development, natural language processing, and computer vision.",
     },
   ];
 
@@ -258,8 +281,8 @@ const ServicesSection = () => {
             <span className="">Services I Provide</span>
           </h2>
           <p className="leading-relaxed">
-            Delivering high-quality digital solutions tailored to your business
-            needs.
+            Providing expert analysis and insights to drive strategic business
+            decisions and optimize performance.
           </p>
         </div>
         <div className="w-full md:w-1/2 grid grid-cols-1 gap-6">
@@ -271,7 +294,7 @@ const ServicesSection = () => {
               {service.icon}
               <div>
                 <h3 className="text-xl font-semibold mb-2">
-                  <span className={`bg-[${brightYellow}]`}>
+                  <span className=" text-blue-500  py-1 rounded">
                     {service.title}
                   </span>
                 </h3>
@@ -296,12 +319,12 @@ const ContactSection = () => {
           <span className="">Want to Work Together?</span>
         </h2>
         <p className="mb-8">
-          I'm always open to discussing product design work or partnership
-          opportunities.
+          I'm always open to discussing business analysis projects or
+          collaboration opportunities.
         </p>
         <div className="flex space-x-4">
           <a
-            href="mailto:contact@abdullahiauwal.com"
+            href="mailto:olusolaibraheemtijani@gmail.com"
             className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition"
           >
             Contact Me
@@ -311,24 +334,24 @@ const ContactSection = () => {
 
       <div className="w-full md:w-1/2">
         <h3 className="text-2xl font-semibold mb-6">
-          <span className="px-1">How I Handle Projects</span>
+          <span className="">How I Handle Projects</span>
         </h3>
         <div className="space-y-4">
           {[
             {
-              title: "User-Centric Design",
+              title: "Data-Driven Insights",
               description:
-                "Conversion-focused interfaces that drive engagement and sales. Data-driven design decisions to improve user retention and boost customer satisfaction metrics.",
+                "Leveraging data analytics to provide actionable insights that drive business growth and efficiency. Focused on improving decision-making and strategic planning.",
             },
             {
-              title: "Collaborative Approach",
+              title: "Strategic Collaboration",
               description:
-                "Strategic partnership focused on ROI and business goals. Regular meetings and clear communication to ensure your project delivers measurable value and meets market demands.",
+                "Partnering with stakeholders to align business objectives with analytical insights. Regular consultations and transparent communication to ensure impactful outcomes.",
             },
             {
-              title: "Continuous Learning",
+              title: "Continuous Improvement",
               description:
-                "Investment in the best technologies and industry best practices, in order to implement better solutions that place your business in a better position.",
+                "Commitment to adopting the latest analytical tools and methodologies. Ensuring your business stays ahead with innovative solutions and industry best practices.",
             },
           ].map((item, index) => (
             <div
@@ -336,7 +359,7 @@ const ContactSection = () => {
               className="bg-white p-4 rounded-lg border-4 border-black"
             >
               <h4 className="font-medium mb-2">
-                <span className={`bg-[${brightYellow}] px-1`}>
+                <span className=" text-blue-500  py-1 rounded">
                   {item.title}
                 </span>
               </h4>
@@ -353,19 +376,19 @@ const Footer = () => {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://github.com/abdul-busybrain",
+      url: ": https://github.com/Data-Tijani?tab=repositories",
     },
     {
       name: "LinkedIn",
-      url: "www.linkedin.com/in/abdullahi-auwal-haruna-3b298422b",
+      url: " https://www.linkedin.com/in/tijani-olusola/",
     },
     {
       name: "X",
-      url: "https://x.com/abdul-busybrain",
+      url: "https://x.com/TijaniShola1?t=QEsewh6EyXX--ZUoIfj9Ag&s=09",
     },
     {
       name: "Whatsapp",
-      url: "https://wa.me/+2348064676821",
+      url: "https://wa.me/+2348038817425",
     },
   ];
 
@@ -374,11 +397,11 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0 text-center md:text-left">
           <h3 className="text-xl font-bold">
-            <span className={`bg-[${brightYellow}]`}>
-              Abdullahi Auwal Haruna
+            <span className=" text-white  py-1 rounded">
+              Olusola Ibrahim Tijani
             </span>
           </h3>
-          <p className="mt-2">Frontend Developer / Web Designer</p>
+          <p className="mt-2">Business & Business Intelligence Analyst</p>
         </div>
         <div className="flex flex-wrap justify-center md:justify-start space-x-4">
           {socialLinks.map((link, index) => {
@@ -388,12 +411,23 @@ const Footer = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`hover:bg-[${brightYellow}] hover:text-yellow-600 px-2 py-1 transition-colors duration-300`}
+                className="hover:bg-blue-500 hover:text-white px-2 py-1 transition-colors duration-300 rounded"
               >
                 {link.name}
               </a>
             );
           })}
+        </div>
+      </div>
+      <div className="flex  items-center justify-center pt-7 ">
+        <div className="inline-block">
+          <p className="inline">Designed & Developed by &nbsp;</p>
+          <a
+            className="border-b border-blue-500"
+            href="www.linkedin.com/in/abdullahi-auwal-haruna-3b298422b"
+          >
+            Abdullahi.Busybrain
+          </a>
         </div>
       </div>
     </footer>
