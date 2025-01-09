@@ -72,7 +72,7 @@ const Header = () => {
           <a href="/">
             <div className="text-xs sm:text-sm font-bold uppercase">
               <div className="px-1">Olusola</div>
-              <div className="px-1">Ibrahim</div>
+              <div className="px-1">Ibraheem</div>
               <div className="px-1">Tijani</div>
             </div>
           </a>
@@ -398,7 +398,7 @@ const Footer = () => {
         <div className="mb-4 md:mb-0 text-center md:text-left">
           <h3 className="text-xl font-bold">
             <span className=" text-white  py-1 rounded">
-              Olusola Ibrahim Tijani
+              Olusola Ibraheem Tijani
             </span>
           </h3>
           <p className="mt-2">Business & Business Intelligence Analyst</p>
