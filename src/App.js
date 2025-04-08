@@ -9,12 +9,19 @@ import {
   Tag,
 } from "lucide-react";
 
+// Components
+import Slideshow from "./Slideshow";
+
 // Images
 import hero from "./img/hero.jpg";
 import callCenterDashBoard from "./img/call-center-dashboard.jpg";
 import insurancePolicy from "./img/insurance-policy.jpg";
 import healthTracker from "./img/health-tracker.jpg";
 import serviceDesk from "./img/service-desk.jpg";
+import bia from "./img/BIA.jpg";
+import bia1 from "./img/BIA1.jpg";
+import bia2 from "./img/BIA2.jpg";
+import bia3 from "./img/BIA3.jpg";
 
 const softBeige = "#f9efe7";
 const brightYellow = "#ffe872";
@@ -143,6 +150,17 @@ const Hero = () => {
 const WorkSection = () => {
   const projects = [
     {
+      title: "Business Insight Analytics",
+      technologies: ["Microsoft Excel", "Tableau"],
+      description:
+        "This is an interactive and highly detailed dashboard, down to the granular level. It provides a comprehensive analysis of key business metrics across four areas: Overall Performance, Customers, Products, and Marketing. *Overview: Presents a high-level summary of business performance, highlighting critical KPIs for strategic decision-making.* *Products: Analyzes top-performing products, sales distribution, and revenue contribution.* *Marketing: Evaluates campaign effectiveness, conversion rates, and customer acquisition channels.* *Customers: Identifies trends in customer demographics, preferences, and purchasing behavior.* This interactive dashboard enhances data-driven decision-making, helping businesses optimize operations and improve profitability.",
+
+      images: [bia, bia1, bia2, bia3],
+      image: bia3,
+      link: "https://public.tableau.com/app/profile/olusola.tijani/viz/BusinessInsightAnalytics/Overview",
+      ongoing: false,
+    },
+    {
       title: "Call Center Dashboard Analysis",
       technologies: ["Microsoft Excel", "Tableau"],
       description:
@@ -199,11 +217,17 @@ const WorkSection = () => {
             </div>
           )}
           <div className="w-full md:w-1/2 p-8">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="rounded-lg shadow-xl border-2 border-black"
-            />
+            {project.images && project.images.length > 0 ? (
+              <div className="w-full">
+                <Slideshow images={project.images} />
+              </div>
+            ) : (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="rounded-lg shadow-xl border-2 border-black"
+              />
+            )}
           </div>
           <div className="w-full md:w-1/2 p-8">
             <h3 className="text-2xl font-semibold mb-4">
@@ -221,7 +245,17 @@ const WorkSection = () => {
                 </span>
               ))}
             </div>
-            <p className="mb-6">{project.description}</p>
+            <div className="mb-6 space-y-2">
+              {project.description
+                .split("*")
+                .filter((part) => part.trim() !== "")
+                .map((part, index) => (
+                  <p key={index} className="text-gray-700 leading-relaxed">
+                    {part.trim()}
+                  </p>
+                ))}
+            </div>
+
             <div className="flex space-x-4">
               <a
                 href={project.link}
