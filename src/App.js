@@ -18,10 +18,10 @@ import callCenterDashBoard from "./img/call-center-dashboard.jpg";
 import insurancePolicy from "./img/insurance-policy.jpg";
 import healthTracker from "./img/health-tracker.jpg";
 import serviceDesk from "./img/service-desk.jpg";
-import bia from "./img/BIA.jpg";
-import bia1 from "./img/BIA1.jpg";
-import bia2 from "./img/BIA2.jpg";
-import bia3 from "./img/BIA3.jpg";
+import BIA from "./img/bia.jpg";
+import BIA1 from "./img/bia1.jpg";
+import BIA2 from "./img/bia2.jpg";
+import BIA3 from "./img/bia3.jpg";
 
 const softBeige = "#f9efe7";
 const brightYellow = "#ffe872";
@@ -155,8 +155,8 @@ const WorkSection = () => {
       description:
         "This is an interactive and highly detailed dashboard, down to the granular level. It provides a comprehensive analysis of key business metrics across four areas: Overall Performance, Customers, Products, and Marketing. *Overview: Presents a high-level summary of business performance, highlighting critical KPIs for strategic decision-making.* *Products: Analyzes top-performing products, sales distribution, and revenue contribution.* *Marketing: Evaluates campaign effectiveness, conversion rates, and customer acquisition channels.* *Customers: Identifies trends in customer demographics, preferences, and purchasing behavior.* This interactive dashboard enhances data-driven decision-making, helping businesses optimize operations and improve profitability.",
 
-      images: [bia, bia1, bia2, bia3],
-      image: bia3,
+      images: [BIA, BIA1, BIA2, BIA3],
+      image: BIA3,
       link: "https://public.tableau.com/app/profile/olusola.tijani/viz/BusinessInsightAnalytics/Overview",
       ongoing: false,
     },
